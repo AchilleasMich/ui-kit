@@ -12,14 +12,15 @@ export default defineConfig({
     tsconfigPaths(),
     dts({
       insertTypesEntry: true,
+      outDir: "dist",
     }),
   ],
   build: {
     lib: {
       entry: "src/index.ts",
-      name: "UiKit",
-      formats: ["es", "cjs"],
-      fileName: (format) => `my-ui-kit.${format}.js`,
+      name: "ui-kit",
+      formats: ["es"],
+      fileName: () => "index.js",
     },
     rollupOptions: {
       external: ["react", "react-dom"],
