@@ -13,6 +13,7 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       outDir: "dist",
+      rollupTypes: true,
     }),
   ],
   build: {
