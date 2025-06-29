@@ -14,6 +14,7 @@ export default defineConfig({
       insertTypesEntry: true,
       outDir: "dist",
       rollupTypes: true,
+      exclude: ["vite.config.ts", "tailwind.config.ts", "vitest.workspace.ts"],
     }),
   ],
   build: {
