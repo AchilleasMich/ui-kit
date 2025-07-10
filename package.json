@@ -3,11 +3,17 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "main": "./dist/ui-kit.umd.cjs",
+  "module": "./dist/ui-kit.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ui-kit.js",
+      "require": "./dist/ui-kit.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

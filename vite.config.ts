@@ -21,15 +21,14 @@ export default defineConfig({
     lib: {
       entry: "src/index.ts",
       name: "ui-kit",
-      formats: ["es"],
-      fileName: () => "index.js",
+      // formats: ["es"],
+      fileName: "ui-kit",
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ["react"],
       output: {
         globals: {
           react: "React",
-          "react-dom": "ReactDOM",
         },
       },
     },
